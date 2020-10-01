@@ -28,9 +28,9 @@ app.get('/', (req, res) => {
   res.send('Working');
 });
 
-const privateKey = fs.readFileSync( '/etc/letsencrypt/live/invoice4u.site/privkey.pem','utf8')
-const certificate = fs.readFileSync(  '/etc/letsencrypt/live/invoice4u.site/cert.pem', 'utf8')
-const ca = fs.readFileSync( '/etc/letsencrypt/live/invoice4u.site/fullchain.pem', 'utf8')
+const privateKey = fs.readFileSync( '/etc/letsencrypt/live/<your_domain_name>/privkey.pem','utf8')
+const certificate = fs.readFileSync(  '/etc/letsencrypt/live/<your_domain_name>/cert.pem', 'utf8')
+const ca = fs.readFileSync( '/etc/letsencrypt/live/<your_domain_name>/fullchain.pem', 'utf8')
 
 const credentials={
 	key: privateKey,
